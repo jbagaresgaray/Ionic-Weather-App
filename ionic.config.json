@@ -1,0 +1,7 @@
+{
+  "name": "ionic-weather-uplabs-sketch",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
