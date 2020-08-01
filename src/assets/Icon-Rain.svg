@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="18px" viewBox="0 0 17 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Untitled-2-05</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Untitled-2-05">
+            <line x1="4.77" y1="13.02" x2="4.5" y2="13.98" id="Shape" stroke="#6BB9F0" stroke-linecap="round"></line>
+            <line x1="7.77" y1="13.02" x2="7.5" y2="13.98" id="Shape" stroke="#6BB9F0" stroke-linecap="round"></line>
+            <line x1="10.77" y1="13.02" x2="10.5" y2="13.98" id="Shape" stroke="#6BB9F0" stroke-linecap="round"></line>
+            <line x1="13.77" y1="13.02" x2="13.5" y2="13.98" id="Shape" stroke="#6BB9F0" stroke-linecap="round"></line>
+            <line x1="5.77" y1="16.02" x2="5.5" y2="16.98" id="Shape" stroke="#6BB9F0" stroke-linecap="round"></line>
+            <line x1="8.77" y1="16.02" x2="8.5" y2="16.98" id="Shape" stroke="#6BB9F0" stroke-linecap="round"></line>
+            <line x1="11.77" y1="16.02" x2="11.5" y2="16.98" id="Shape" stroke="#6BB9F0" stroke-linecap="round"></line>
+            <path d="M13,4 C12.4961077,4.00321165 11.9973594,4.10160416 11.53,4.29 C10.4264509,1.775083 7.6368276,0.459678288 4.99442944,1.20825041 C2.35203129,1.95682253 0.666823624,4.5399142 1.04630004,7.25995572 C1.42577645,9.97999724 3.75361732,12.0032235 6.5,12.0000038 L13,12.0000038 C15.209139,12.0000038 17,10.209139 17,8 C17,5.790861 15.209139,4 13,4 Z" id="Shape" fill="#BDC3C7" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

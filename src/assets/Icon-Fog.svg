@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.007" height="16" viewBox="0 0 16.007 16">
+  <g id="Icon_Fog" data-name="Icon/Fog" transform="translate(0.007)">
+    <rect id="Icon_Fog_background" data-name="Icon/Fog background" width="16" height="16" fill="transparent"/>
+    <g id="Untitled-2-09" transform="translate(-1)">
+      <path id="Shape" d="M12.007,3a4,4,0,0,0-1.47.29A5.5,5.5,0,1,0,5.507,11h6.5a4,4,0,1,0,0-8Z" transform="translate(0.993 0.999)" fill="#fff"/>
+      <path id="Shape-2" data-name="Shape" d="M0,0H10" transform="translate(5 13)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Shape-3" data-name="Shape" d="M0,0H10" transform="translate(5 15)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

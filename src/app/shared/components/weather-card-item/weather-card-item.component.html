@@ -1,0 +1,13 @@
+<ion-card class="weather-card" (click)="cardClick()">
+    <img src="https://ionicframework.com/docs/demos/api/card/madison.jpg" />
+    <div class="weather-card-content">
+        <div class="weather-card-status">
+            <ion-icon [src]="generateWeatherIcon(weatherDescription)"></ion-icon>
+            {{weatherDescription}}
+        </div>
+        <div class="weather-card-temperature">{{weatherInfo.temperature}} &deg;</div>
+        <div class="weather-card-location">
+            {{city}}
+        </div>
+    </div>
+</ion-card>

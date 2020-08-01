@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16">
+  <g id="Icon_Sunrise" data-name="Icon/Sunrise" transform="translate(0.5)">
+    <rect id="Icon_Sunrise_background" data-name="Icon/Sunrise background" width="16" height="16" fill="transparent"/>
+    <g id="Untitled-2-06" transform="translate(0 4)">
+      <path id="Shape" d="M9,4.5A4.38,4.38,0,0,1,8.74,6H.26A4.38,4.38,0,0,1,0,4.5a4.5,4.5,0,1,1,9,0Z" transform="translate(3.5 3.75)" fill="#f7ca18"/>
+      <path id="Shape-2" data-name="Shape" d="M0,0V2" transform="translate(8 0.25)" fill="none" stroke="#f7ca18" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Shape-3" data-name="Shape" d="M0,0V2" transform="translate(8 0.25)" fill="none" stroke="#f7ca18" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Shape-4" data-name="Shape" d="M0,0V2" transform="translate(8 0.25)" fill="none" stroke="#f7ca18" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Shape-5" data-name="Shape" d="M0,0V2" transform="translate(8 0.25)" fill="none" stroke="#f7ca18" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Shape-6" data-name="Shape" d="M1.42,0,0,1.42" transform="translate(12.24 2.59)" fill="none" stroke="#f7ca18" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Shape-7" data-name="Shape" d="M1.42,0,0,1.42" transform="translate(12.24 2.59)" fill="none" stroke="#f7ca18" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Shape-8" data-name="Shape" d="M2,0H0" transform="translate(14 8.25)" fill="none" stroke="#f7ca18" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Shape-9" data-name="Shape" d="M2,0H0" transform="translate(14 8.25)" fill="none" stroke="#f7ca18" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Shape-10" data-name="Shape" d="M0,0H2" transform="translate(0 8.25)" fill="none" stroke="#f7ca18" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Shape-11" data-name="Shape" d="M0,0H2" transform="translate(0 8.25)" fill="none" stroke="#f7ca18" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Shape-12" data-name="Shape" d="M0,0,1.42,1.42" transform="translate(2.34 2.59)" fill="none" stroke="#f7ca18" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Shape-13" data-name="Shape" d="M0,0,1.42,1.42" transform="translate(2.34 2.59)" fill="none" stroke="#f7ca18" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Shape-14" data-name="Shape" d="M0,0H13" transform="translate(1.5 10.75)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

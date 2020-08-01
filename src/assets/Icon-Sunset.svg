@@ -1,0 +1,8 @@
+<svg id="Icon_Sunset" data-name="Icon/Sunset"
+  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <rect id="Icon_Sunset_background" data-name="Icon/Sunset background" width="16" height="16" fill="transparent"/>
+  <g id="Untitled-2-07" transform="translate(1 7)">
+    <path id="Shape" d="M10,5.25A5.34,5.34,0,0,1,9.711,7H.289A5.34,5.34,0,0,1,0,5.25,5.13,5.13,0,0,1,5,0a5.13,5.13,0,0,1,5,5.25Z" transform="translate(2)" fill="#f4ab19"/>
+    <path id="Shape-2" data-name="Shape" d="M0,0H14" transform="translate(0 8)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>

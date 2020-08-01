@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/Overcast 2</title>
+    <g id="Icon/Overcast-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Untitled-2-04" transform="translate(-1.000000, 2.000000)" fill="#BDC3C7" fill-rule="nonzero">
+            <path d="M13,3.5 C12.4961077,3.50321165 11.9973594,3.60160416 11.53,3.79 C10.4248741,1.2716482 7.62945375,-0.0433243776 4.9847964,0.711120157 C2.34013904,1.46556469 0.659247015,4.0575002 1.04915192,6.77988394 C1.43905683,9.50226768 3.77989678,11.5182032 6.53,11.5 L13,11.5 C15.209139,11.5 17,9.709139 17,7.5 C17,5.290861 15.209139,3.5 13,3.5 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
