@@ -29,4 +29,14 @@ export class WeatherService {
         '&units=m'
     );
   }
+
+  searchAutoComplete(query) {
+    return this.http.get(
+      environment.weatherStackURL +
+        'current?query=' +
+        query +
+        '&access_key=' +
+        environment.weatherStackAPI
+    );
+  }
 }

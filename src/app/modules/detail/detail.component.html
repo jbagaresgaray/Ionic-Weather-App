@@ -1,38 +1,116 @@
-<ion-content [fullscreen]="true">
-    <div class="for-content">
-        <ion-toolbar class="app-content-padding">
-            <ion-buttons slot="start">
-                <ion-back-button defaultHref="home"></ion-back-button>
-            </ion-buttons>
-            <ion-buttons slot="end">
-                <ion-button>
-                    <ion-icon slot="icon-only" name="search-outline" class="search-icon"></ion-icon>
-                </ion-button>
-            </ion-buttons>
+<ion-header translucent="true">
+    <ion-toolbar class="app-content-padding">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+        <ion-title>&nbsp;</ion-title>
+        <ion-buttons slot="end">
+            <ion-button>
+                <ion-icon slot="icon-only" name="search-outline" class="search-icon"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content fullscreen="true">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">&nbsp;</ion-title>
         </ion-toolbar>
-        <img src="./assets/demo.jpg" class="weather-card-image" />
-        <div class="weather-info-view">
-            <div class="weather-card-status">
-                <ion-icon src="./assets/Icon-Sunset.svg"></ion-icon>
-                <!-- <ion-icon src="./assets/Icon-Cloud.svg"></ion-icon> -->
-                <!-- <ion-icon src="./assets/Icon-Fog.svg"></ion-icon> -->
-                <!-- <ion-icon src="./assets/Icon-Night.svg"></ion-icon> -->
-                <!-- <ion-icon src="./assets/Icon-Overcast.svg"></ion-icon> -->
-                <!-- <ion-icon src="./assets/Icon-Overcast2.svg"></ion-icon> -->
-                <!-- <ion-icon src="./assets/Icon-Rain.svg"></ion-icon> -->
-                <!-- <ion-icon src="./assets/Icon-Sun.svg"></ion-icon> -->
-                <!-- <ion-icon src="./assets/Icon-Sunrise.svg"></ion-icon> -->
-                Sunset
-            </div>
-            <div class="weather-card-location">
-                Madison, WI
-            </div>
-            <div class="weather-card-temperature">3 &deg;</div>
+    </ion-header>
+    <div class="weather-info-view">
+        <div class="weather-card-status">
+            <ion-icon src="./assets/Icon-Sunset.svg"></ion-icon>
+            Sunset
         </div>
+        <div class="weather-card-location">
+            Madison, WI
+        </div>
+        <div class="weather-card-temperature">3 &deg;</div>
     </div>
-    <ion-list>
-        <ion-item>
-            
-        </ion-item>
-    </ion-list>
 </ion-content>
+<ion-footer>
+    <div class="weather-list-view">
+        <ion-list>
+            <ion-item>
+                <ion-row class="weather-list-item-row">
+                    <ion-col size="6">
+                        <ion-label class="weather-list-item-label">Tomorrow</ion-label>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-label>
+                            <ion-icon class="weather-list-item-icon" src="./assets/Icon-Sunset.svg"></ion-icon>
+                        </ion-label>
+                    </ion-col>
+                </ion-row>
+                <div slot="end">
+                    <ion-note class="weather-list-item-label">17</ion-note>
+                    <ion-note class="weather-list-item-label weather-list-item-note">12</ion-note>
+                </div>
+            </ion-item>
+            <ion-item>
+                <ion-row class="weather-list-item-row">
+                    <ion-col size="6">
+                        <ion-label class="weather-list-item-label">Tuesday</ion-label>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-label>
+                            <ion-icon class="weather-list-item-icon" src="./assets/Icon-Sunset.svg"></ion-icon>
+                        </ion-label>
+                    </ion-col>
+                </ion-row>
+                <div slot="end">
+                    <ion-note class="weather-list-item-label">17</ion-note>
+                    <ion-note class="weather-list-item-label weather-list-item-note">12</ion-note>
+                </div>
+            </ion-item>
+            <ion-item>
+                <ion-row class="weather-list-item-row">
+                    <ion-col size="6">
+                        <ion-label class="weather-list-item-label">Wednesday</ion-label>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-label>
+                            <ion-icon class="weather-list-item-icon" src="./assets/Icon-Sunset.svg"></ion-icon>
+                        </ion-label>
+                    </ion-col>
+                </ion-row>
+                <div slot="end">
+                    <ion-note class="weather-list-item-label">17</ion-note>
+                    <ion-note class="weather-list-item-label weather-list-item-note">12</ion-note>
+                </div>
+            </ion-item>
+            <ion-item>
+                <ion-row class="weather-list-item-row">
+                    <ion-col size="6">
+                        <ion-label class="weather-list-item-label">Thursday</ion-label>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-label>
+                            <ion-icon class="weather-list-item-icon" src="./assets/Icon-Sunset.svg"></ion-icon>
+                        </ion-label>
+                    </ion-col>
+                </ion-row>
+                <div slot="end">
+                    <ion-note class="weather-list-item-label">17</ion-note>
+                    <ion-note class="weather-list-item-label weather-list-item-note">12</ion-note>
+                </div>
+            </ion-item>
+            <ion-item>
+                <ion-row class="weather-list-item-row">
+                    <ion-col size="6">
+                        <ion-label class="weather-list-item-label">Friday</ion-label>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-label>
+                            <ion-icon class="weather-list-item-icon" src="./assets/Icon-Sunset.svg"></ion-icon>
+                        </ion-label>
+                    </ion-col>
+                </ion-row>
+                <div slot="end">
+                    <ion-note class="weather-list-item-label">17</ion-note>
+                    <ion-note class="weather-list-item-label weather-list-item-note">12</ion-note>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-footer>

@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SearchModalModule } from './modules/search-modal/search-modal.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
       backButtonIcon: 'arrow-back-outline',
     }),
     AppRoutingModule,
+    SearchModalModule,
   ],
   providers: [
     StatusBar,

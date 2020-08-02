@@ -1,14 +1,27 @@
-<ion-header [translucent]="true">
-    <ion-toolbar class="app-content-padding">
-        <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-        <ion-buttons slot="end">
-            <ion-button>
-                <ion-icon slot="icon-only" name="search-outline" class="search-icon"></ion-icon>
-            </ion-button>
-        </ion-buttons>
-    </ion-toolbar>
+<ion-header>
+    <ng-container *ngIf="showSearch">
+        <ion-toolbar class="app-padding-header">
+            <ion-buttons slot="start">
+                <ion-button (click)="onCancelSearch()">
+                    <ion-icon slot="icon-only" name="arrow-back-outline" class="search-icon"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+            <ion-searchbar></ion-searchbar>
+        </ion-toolbar>
+    </ng-container>
+    <ng-container *ngIf="!showSearch">
+        <ion-toolbar class="app-content-padding">
+            <ion-buttons slot="start">
+                <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            <ion-title>&nbsp;</ion-title>
+            <ion-buttons slot="end">
+                <ion-button (click)="onShowSearch()">
+                    <ion-icon slot="icon-only" name="search-outline" class="search-icon"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ng-container>
     <ion-toolbar class="app-content-padding">
         <ion-title size="large" class="app-title">Weather</ion-title>
     </ion-toolbar>
@@ -24,13 +37,23 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="app-content-padding">
+<ion-content>
     <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
         <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
+
     <ion-list>
-        <ng-container *ngFor="let item of cityListArr">
-            <app-weather-card-item [city]="item.name" (onCardClick)="onWeatherItemClick()"></app-weather-card-item>
+        <ng-container *ngIf="showData">
+            <ng-container *ngFor="let item of cityListArr">
+                <app-weather-card-item [city]="item.name" (onCardClick)="onWeatherItemClick()"></app-weather-card-item>
+            </ng-container>
+        </ng-container>
+        <ng-container *ngIf="!showData">
+            <ng-container *ngFor="let item of fakeArr">
+                <div class="ion-padding">
+                    <ion-skeleton-text animated style="border-radius: 12px; height: 120px;"></ion-skeleton-text>
+                </div>
+            </ng-container>
         </ng-container>
     </ion-list>
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">

@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
@@ -7,7 +8,15 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./detail.component.scss'],
 })
 export class DetailComponent implements OnInit {
-  constructor() {}
+  paramsObj: any;
+
+  constructor(private route: ActivatedRoute) {
+    this.route.queryParamMap.subscribe((params) => {
+      this.paramsObj = { ...params.keys, ...params };
+
+      console.log('paramsObj: ', this.paramsObj);
+    });
+  }
 
   ngOnInit(): void {}
 }

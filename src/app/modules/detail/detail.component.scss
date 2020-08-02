@@ -1,4 +1,23 @@
 app-detail {
+    ion-content {
+        --background: transparent url('../../../assets/demo.jpg') 0 0/100% 100% no-repeat padding-box;
+
+        ion-header {
+            --background: transparent;
+
+            ion-toolbar {
+                --background: transparent;
+            }
+        }
+    }
+
+    .header-collapse-condense {
+        ion-toolbar {
+            --background: transparent;
+            --border-width: 0px !important;
+        }
+    }
+
     ion-back-button {
         color: #ffffff;
     }
@@ -11,21 +30,16 @@ app-detail {
         height: 100%;
         width: 100%;
         position: relative;
-
-        ion-toolbar {
-            --background: transparent;
-        }
     }
 
     .weather-info-view {
         position: absolute;
         top: 0;
-        bottom: 0;
         left: 0;
         right: 0;
-        padding-top: 44px;
         padding-left: 24px;
         padding-right: 24px;
+        margin-top: 122px;
     }
 
     .weather-card-image {
@@ -50,7 +64,7 @@ app-detail {
         font-weight: 400;
         line-height: 29px;
         color: #ffffff;
-        margin-top: 23px;
+        margin-top: 0px;
         margin-bottom: 7px;
     }
 
@@ -64,7 +78,52 @@ app-detail {
         right: 0;
         top: 0;
         padding-right: 24px;
-        padding-top: 44px;
-        margin-top: 14px;
+    }
+
+    .weather-list-view {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        background: #2A2E43 0% 0% no-repeat padding-box;
+        box-shadow: 0px -12px 15px #455B6314;
+        border-radius: 24px 24px 0px 0px;
+        padding-top: 24px;
+        padding-bottom: 34px;
+
+        ion-list {
+            background: #2A2E43 0% 0% no-repeat padding-box;
+        }
+
+        ion-item {
+            --background: #2A2E43 0% 0% no-repeat padding-box;
+            --padding-start: 24px;
+            --padding-end: 24px;
+            --min-height: 55px;
+        }
+
+        .weather-list-item-label {
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 0.26px;
+            color: #ffffff;
+        }
+
+        .weather-list-item-icon {
+            font-size: 24px;
+        }
+
+        .weather-list-item-note {
+            margin-left: 15px;
+            opacity: 0.5;
+        }
+
+
+    }
+
+    .weather-list-item-row {
+        flex-wrap: unset;
+        width: 100%;
     }
 }

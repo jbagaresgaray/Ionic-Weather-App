@@ -90,3 +90,9 @@
   --padding-start: 16px;
   --padding-end: 16px;
 }
+
+.app-padding-header {
+  padding-top: calc(var(--ion-safe-area-top, 0) + 8px) !important;
+  --padding-start: 16px;
+  --padding-end: 16px;
+}
