@@ -3,7 +3,8 @@
 
 This repository contains the code of the [Weather App](https://www.uplabs.com/posts/uplabs-weather-app-challenge) from Uplabs. Thanks to [Kenneth Patterson](https://www.uplabs.com/pattsyk91) on his beautiful and inspirational App that he share on Uplabs
 
-This repository is build using Ionic 5
+This repository is build using Ionic 5. 
+Checkout the [Build Release](https://github.com/jbagaresgaray/Ionic-Weather-App/releases)
 
 ![Weather App](https://i.ibb.co/rw5JYX8/Group.png)
 
