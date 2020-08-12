@@ -1,7 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Plugins } from '@capacitor/core';
-
-const { Storage } = Plugins;
 
 @Injectable({
   providedIn: 'root',
@@ -9,23 +6,21 @@ const { Storage } = Plugins;
 export class StorageService {
   constructor() {}
 
-  async setObject(key, values) {
-    await Storage.set({
-      key,
-      value: JSON.stringify(values),
-    });
+  setItem(key: string, value: any) {
+    localStorage.setItem(key, JSON.stringify(value));
   }
 
-  async getObject(key) {
-    const ret = await Storage.get({ key });
-    return JSON.parse(ret.value);
+  removeItem(item: string) {
+    localStorage.removeItem(item);
   }
 
-  async removeItem(key) {
-    await Storage.remove({ key });
+  getItem(item: string) {
+    return localStorage.getItem(item)
+      ? JSON.parse(localStorage.getItem(item))
+      : null;
   }
 
-  async clear() {
-    await Storage.clear();
+  clearStorage() {
+    return localStorage.clear();
   }
 }

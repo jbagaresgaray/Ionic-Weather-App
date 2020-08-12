@@ -6,8 +6,9 @@ import {
   EventEmitter,
   Input,
 } from '@angular/core';
-import { WeatherService } from '../../services/weather.service';
 import toLower from 'lodash-es/toLower';
+
+import { WeatherService } from '../../services/weather.service';
 
 @Component({
   selector: 'app-weather-card-item',
@@ -19,6 +20,7 @@ export class WeatherCardItemComponent implements OnInit {
   // tslint:disable-next-line:no-output-on-prefix
   @Output() onCardClick = new EventEmitter();
   @Input() city: string;
+  @Input() cardImage: any = {};
 
   weatherInfo: any = {};
   locationInfo: any = {};
@@ -36,9 +38,16 @@ export class WeatherCardItemComponent implements OnInit {
     //     console.log('getOpenWeatherByCity error: ', error);
     //   }
     // );
+    // this.getWeatherInfo();
+  }
+
+  cardClick(event: any) {
+    this.onCardClick.emit(event);
+  }
+
+  private getWeatherInfo() {
     this.weatherService.getWeatherStackByCity(this.city).subscribe(
       (response: any) => {
-        console.log('getWeatherStackByCity response: ', response);
         if (response) {
           this.weatherInfo = response.current;
           this.locationInfo = response.location;
@@ -55,10 +64,6 @@ export class WeatherCardItemComponent implements OnInit {
         console.log('getWeatherStackByCity error: ', error);
       }
     );
-  }
-
-  cardClick(event: any) {
-    this.onCardClick.emit(event);
   }
 
   generateWeatherIcon(weatherDescription) {
@@ -79,6 +84,8 @@ export class WeatherCardItemComponent implements OnInit {
         return './assets/Icon-Sunset.svg';
       } else if (toLower(weatherDescription).indexOf('overcast') !== -1) {
         return './assets/Icon-Overcast2.svg';
+      } else if (toLower(weatherDescription).indexOf('clear') !== -1) {
+        return './assets/Icon-Sun.svg';
       }
     }
   }

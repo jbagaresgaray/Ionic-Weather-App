@@ -6,4 +6,39 @@ app-home {
     .search-icon {
         color: var(--app-title-color);
     }
+
+    ion-content {
+        --background: #455B6314;
+    }
+
+    ion-list {
+        --background: #455B6314;
+    }
+
+    .toolbar-segment {
+        --background: #455B6314;
+        --padding-top: 0px;
+        --padding-start: 0px;
+        --padding-end: 0px;
+    }
+
+    .group-segment {
+        --background: #fff;
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+
+        .segment-today {
+            border-bottom-left-radius: 24px;
+            --background-checked: none;
+            --indicator-color: none;
+            box-shadow: 0px 12px 16px #455B6314;
+        }
+
+        .segment-tomorrow {
+            border-bottom-right-radius: 24px;
+            --background-checked: none;
+            --indicator-color: none;
+            box-shadow: 0px 12px 16px #455B6314;
+        }
+    }
 }

@@ -1,11 +1,14 @@
-<ion-card class="weather-card" (click)="cardClick()">
-    <img src="https://ionicframework.com/docs/demos/api/card/madison.jpg" />
+<ion-card class="weather-card" [ngStyle]="{background: 'url(' + cardImage.small + ') 0 0 /cover no-repeat padding-box'}"
+    (click)="cardClick()">
     <div class="weather-card-content">
         <div class="weather-card-status">
-            <ion-icon [src]="generateWeatherIcon(weatherDescription)"></ion-icon>
-            {{weatherDescription}}
+            <!-- <ion-icon [src]="generateWeatherIcon(weatherDescription)"></ion-icon>
+            {{weatherDescription}} -->
+            <ion-icon [src]="generateWeatherIcon('Sunny')"></ion-icon>
+            {{'Sunny'}}
         </div>
-        <div class="weather-card-temperature">{{weatherInfo.temperature}} &deg;</div>
+        <!-- <div class="weather-card-temperature">{{weatherInfo.temperature}} &deg;</div> -->
+        <div class="weather-card-temperature">37 &deg;</div>
         <div class="weather-card-location">
             {{city}}
         </div>

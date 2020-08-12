@@ -24,3 +24,25 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+.app-title {
+    color: var(--app-title-color);
+}
+
+.app-content-padding {
+    // padding-left: 24px;
+    // padding-right: 24px;
+    --padding-start: 16px;
+    --padding-end: 16px;
+}
+
+.app-padding-header {
+    padding-top: calc(var(--ion-safe-area-top, 0) + 8px) !important;
+    --padding-start: 16px;
+    --padding-end: 16px;
+}
+
+body {
+    background-color: #FEFEFE;
+}

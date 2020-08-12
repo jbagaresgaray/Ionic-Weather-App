@@ -1,11 +1,10 @@
-app-weather-card-item {
+app-place-card-item {
     .weather-card {
         position: relative;
         border-radius: 12px;
         max-height: 140px;
         height: 140px;
         background: transparent linear-gradient(180deg, #00000000 0%, #00000080 100%) 0% 0% no-repeat padding-box;
-        // background: #FEFEFE 0% 0% no-repeat padding-box;
 
         img {
             width: 100%;
@@ -54,10 +53,9 @@ app-weather-card-item {
 
     .weather-card-location {
         position: absolute;
-        right: 0;
+        left: 0;
         bottom: 0;
-        padding-right: 16px;
+        padding-left: 16px;
         padding-bottom: 16px;
     }
-
 }

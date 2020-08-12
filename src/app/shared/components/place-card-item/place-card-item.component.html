@@ -1,0 +1,12 @@
+<ion-card class="weather-card" [ngStyle]="{background: 'url(' + cardImage + ') 0 0 /cover no-repeat padding-box'}"
+    (click)="cardClick()">
+    <div class="weather-card-content">
+        <div class="weather-card-status">
+            {{city}}
+        </div>
+        <!-- <div class="weather-card-temperature">{{weatherInfo.temperature}} &deg;</div> -->
+        <div class="weather-card-location">
+            {{description}}
+        </div>
+    </div>
+</ion-card>

@@ -20,6 +20,7 @@ import { SearchModalModule } from './modules/search-modal/search-modal.module';
     IonicModule.forRoot({
       backButtonText: '',
       backButtonIcon: 'arrow-back-outline',
+      rippleEffect: false,
     }),
     AppRoutingModule,
     SearchModalModule,

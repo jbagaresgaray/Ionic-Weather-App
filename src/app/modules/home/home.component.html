@@ -1,36 +1,24 @@
-<ion-header>
-    <ng-container *ngIf="showSearch">
-        <ion-toolbar class="app-padding-header">
-            <ion-buttons slot="start">
-                <ion-button (click)="onCancelSearch()">
-                    <ion-icon slot="icon-only" name="arrow-back-outline" class="search-icon"></ion-icon>
-                </ion-button>
-            </ion-buttons>
-            <ion-searchbar></ion-searchbar>
-        </ion-toolbar>
-    </ng-container>
-    <ng-container *ngIf="!showSearch">
-        <ion-toolbar class="app-content-padding">
-            <ion-buttons slot="start">
-                <ion-menu-button></ion-menu-button>
-            </ion-buttons>
-            <ion-title>&nbsp;</ion-title>
-            <ion-buttons slot="end">
-                <ion-button (click)="onShowSearch()">
-                    <ion-icon slot="icon-only" name="search-outline" class="search-icon"></ion-icon>
-                </ion-button>
-            </ion-buttons>
-        </ion-toolbar>
-    </ng-container>
-    <ion-toolbar class="app-content-padding">
+<ion-header class="ion-no-border">
+    <ion-toolbar class="app-content-padding ion-no-border">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>&nbsp;</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="onShowSearch()">
+                <ion-icon slot="icon-only" name="search-outline" class="search-icon"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar class="app-content-padding ion-no-border">
         <ion-title size="large" class="app-title">Weather</ion-title>
     </ion-toolbar>
-    <ion-toolbar>
-        <ion-segment mode="md" value="today">
-            <ion-segment-button value="today">
+    <ion-toolbar class="ion-no-border segment-toolbar">
+        <ion-segment mode="md" value="today" class="group-segment">
+            <ion-segment-button value="today" class="segment-today">
                 Today
             </ion-segment-button>
-            <ion-segment-button value="tomorrow">
+            <ion-segment-button value="tomorrow" class="segment-tomorrow">
                 Tomorrow
             </ion-segment-button>
         </ion-segment>
@@ -42,23 +30,21 @@
         <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
 
-    <ion-list>
-        <ng-container *ngIf="showData">
-            <ng-container *ngFor="let item of cityListArr">
-                <app-weather-card-item [city]="item.name" (onCardClick)="onWeatherItemClick()"></app-weather-card-item>
-            </ng-container>
+    <!-- <ng-container *ngIf="showData"> -->
+    <ng-container *ngFor="let item of cityListArr; let i = index; let odd=odd; let even =even;">
+        <div class="animate__animated animate__faster"
+            [ngClass]="{ 'animate__lightSpeedInLeft': odd, 'animate__lightSpeedInRight': even}">
+            <app-weather-card-item [cardImage]="item.image" [city]="item.description | truncate: ['20']"
+                class="weather-card-item" (onCardClick)="onWeatherItemClick(item)">
+            </app-weather-card-item>
+        </div>
+    </ng-container>
+    <!-- </ng-container> -->
+    <!-- <ng-container *ngIf="!showData">
+        <ng-container *ngFor="let item of fakeArr">
+            <div class="ion-padding">
+                <ion-skeleton-text animated style="border-radius: 12px; height: 120px;"></ion-skeleton-text>
+            </div>
         </ng-container>
-        <ng-container *ngIf="!showData">
-            <ng-container *ngFor="let item of fakeArr">
-                <div class="ion-padding">
-                    <ion-skeleton-text animated style="border-radius: 12px; height: 120px;"></ion-skeleton-text>
-                </div>
-            </ng-container>
-        </ng-container>
-    </ion-list>
-    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button color="warning">
-            <ion-icon name="add-outline"></ion-icon>
-        </ion-fab-button>
-    </ion-fab>
+    </ng-container> -->
 </ion-content>

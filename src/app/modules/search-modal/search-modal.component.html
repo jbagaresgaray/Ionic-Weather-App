@@ -1,1 +1,51 @@
-<p>search-modal works!</p>
+<ion-header>
+    <ion-toolbar class="app-padding-header">
+        <ion-buttons slot="start">
+            <ion-button (click)="dismiss()">
+                <ion-icon slot="icon-only" name="arrow-back-outline" class="search-icon"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-searchbar [debounce]="600" placeholder="Search Location" (ionChange)="onSearchLocation($event)">
+        </ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <ion-list>
+        <ion-list-header>
+            <ion-label>{{locationListArr.length}} Results found</ion-label>
+        </ion-list-header>
+        <ng-container *ngIf="!isSearching">
+            <ng-container *ngFor="let item of locationListArr">
+                <app-place-card-item [city]="item.title" [description]="item.description"
+                    (onCardClick)="presentActionSheet(item)"></app-place-card-item>
+            </ng-container>
+        </ng-container>
+        <ng-container *ngIf="isSearching">
+            <ng-container *ngFor="let item of fakeArr">
+                <div class="ion-padding-end ion-padding-start ion-padding-top">
+                    <ion-skeleton-text animated style="border-radius: 12px; height: 120px;"></ion-skeleton-text>
+                </div>
+            </ng-container>
+        </ng-container>
+
+        <!-- <ng-container *ngIf="isSearching">
+            <ion-item lines="none" *ngFor="let item of fakeArr">
+              <ion-thumbnail slot="start">
+                <ion-skeleton-text></ion-skeleton-text>
+              </ion-thumbnail>
+              <ion-label>
+                <h2>
+                  <ion-skeleton-text style="width: 88%;"></ion-skeleton-text>
+                </h2>
+                <p>
+                  <ion-skeleton-text animated style="width: 80%;"></ion-skeleton-text>
+                </p>
+              </ion-label>
+            </ion-item>
+          </ng-container> -->
+    </ion-list>
+</ion-content>

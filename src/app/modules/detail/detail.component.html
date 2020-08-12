@@ -1,5 +1,5 @@
-<ion-header translucent="true">
-    <ion-toolbar class="app-content-padding">
+<!-- <ion-header class="main-toolbar">
+    <ion-toolbar [class.show-background]="showToolbar">
         <ion-buttons slot="start">
             <ion-back-button defaultHref="home"></ion-back-button>
         </ion-buttons>
@@ -10,26 +10,35 @@
             </ion-button>
         </ion-buttons>
     </ion-toolbar>
-</ion-header>
-<ion-content fullscreen="true">
+</ion-header> -->
+<ion-content fullscreen="true" (ionScroll)="onScroll($event)" [scrollEvents]="true"
+    [ngStyle]="{background: 'url(' + locationObj?.image?.full + ') 0 0 /cover no-repeat padding-box'}">
     <ion-header collapse="condense">
         <ion-toolbar>
-            <ion-title size="large">&nbsp;</ion-title>
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="home"></ion-back-button>
+            </ion-buttons>
+            <ion-title>&nbsp;</ion-title>
         </ion-toolbar>
     </ion-header>
     <div class="weather-info-view">
-        <div class="weather-card-status">
-            <ion-icon src="./assets/Icon-Sunset.svg"></ion-icon>
-            Sunset
+        <div class="weather-card-status animate__animated animate__slideInLeft animate__faster">
+            <!-- <ion-icon [src]="generateWeatherIcon(weatherDescription)"></ion-icon>
+            {{weatherDescription}} -->
+            <ion-icon [src]="generateWeatherIcon('Sunny')"></ion-icon>
+            {{'Sunny'}}
         </div>
-        <div class="weather-card-location">
-            Madison, WI
+        <div class="weather-card-location animate__animated animate__slideInLeft animate__faster">
+            {{locationObj.description}}
         </div>
-        <div class="weather-card-temperature">3 &deg;</div>
+        <!-- <div class="weather-card-temperature">{{weatherInfo.temperature}} &deg;</div> -->
+        <div class="weather-card-temperature animate__animated animate__slideInRight animate__faster">{{'37'}} &deg;
+        </div>
     </div>
 </ion-content>
 <ion-footer>
-    <div class="weather-list-view">
+    <div class="weather-list-view animate__animated animate__slideInUp animate__faster"
+        [ngClass]="{'d-block': showData}">
         <ion-list>
             <ion-item>
                 <ion-row class="weather-list-item-row">

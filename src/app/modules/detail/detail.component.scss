@@ -1,25 +1,43 @@
 app-detail {
     ion-content {
-        --background: transparent url('../../../assets/demo.jpg') 0 0/100% 100% no-repeat padding-box;
+        // --background: transparent url('../../../assets/demo.jpg') 0 0/100% 100% no-repeat padding-box;
+        --background: transparent linear-gradient(180deg, #00000000 0%, #00000080 100%) 0% 0% no-repeat padding-box;
+        // --background: transparent 0 0/100% 100% no-repeat padding-box;
+    }
 
-        ion-header {
+    ion-header {
+        --background: transparent;
+
+        ion-toolbar {
             --background: transparent;
-
-            ion-toolbar {
-                --background: transparent;
-            }
+            --ion-color-base: transparent !important;
         }
+    }
+
+    /* Remove bottom border on md */
+    .header-md::after {
+        background-image: none;
+    }
+
+    /* Remove bottom border on ios */
+    .header-ios ion-toolbar:last-child {
+        --border-width: 0;
     }
 
     .header-collapse-condense {
         ion-toolbar {
             --background: transparent;
             --border-width: 0px !important;
+            padding-top: var(--ion-safe-area-top, 0) !important;
         }
     }
 
     ion-back-button {
         color: #ffffff;
+    }
+
+    .d-block {
+        display: block !important;
     }
 
     .search-icon {
@@ -40,6 +58,7 @@ app-detail {
         padding-left: 24px;
         padding-right: 24px;
         margin-top: 122px;
+        padding-top: var(--ion-safe-area-top, 0) !important;
     }
 
     .weather-card-image {
@@ -69,14 +88,14 @@ app-detail {
     }
 
     .weather-card-temperature {
-        font-size: 64px;
+        font-size: 77px;
         font-weight: 600;
-        line-height: 77px;
+        /* line-height: 77px; */
         color: #ffffff;
 
         position: absolute;
         right: 0;
-        top: 0;
+        top: 6rem;
         padding-right: 24px;
     }
 
@@ -85,6 +104,7 @@ app-detail {
         bottom: 0;
         left: 0;
         right: 0;
+        display: none;
 
         background: #2A2E43 0% 0% no-repeat padding-box;
         box-shadow: 0px -12px 15px #455B6314;
@@ -125,5 +145,12 @@ app-detail {
     .weather-list-item-row {
         flex-wrap: unset;
         width: 100%;
+    }
+
+    .animate__delay-600ms {
+        -webkit-animation-delay: 600ms;
+        animation-delay: 600ms;
+        -webkit-animation-delay: var(--animate-delay);
+        animation-delay: var(--animate-delay);
     }
 }
