@@ -22,17 +22,20 @@
         </ion-toolbar>
     </ion-header>
     <div class="weather-info-view">
-        <div class="weather-card-status animate__animated animate__slideInLeft animate__faster">
+        <div class="weather-card-status animate__animated animate__slideInLeft animate__faster"
+            [ngClass]="{'d-block': showData}">
             <!-- <ion-icon [src]="generateWeatherIcon(weatherDescription)"></ion-icon>
             {{weatherDescription}} -->
             <ion-icon [src]="generateWeatherIcon('Sunny')"></ion-icon>
             {{'Sunny'}}
         </div>
-        <div class="weather-card-location animate__animated animate__slideInLeft animate__faster">
+        <div class="weather-card-location animate__animated animate__slideInLeft animate__faster"
+            [ngClass]="{'d-block': showData}">
             {{locationObj.description}}
         </div>
         <!-- <div class="weather-card-temperature">{{weatherInfo.temperature}} &deg;</div> -->
-        <div class="weather-card-temperature animate__animated animate__slideInRight animate__faster">{{'37'}} &deg;
+        <div class="weather-card-temperature animate__animated animate__slideInRight animate__faster"
+            [ngClass]="{'d-block': showData}">{{'37'}} &deg;
         </div>
     </div>
 </ion-content>
