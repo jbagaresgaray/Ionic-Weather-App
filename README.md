@@ -1,7 +1,7 @@
 
 ## Weather App
 
-This repository contains the code of the [Weather App](https://angular-university.io/course/angular-ngrx-course) from Uplabs.
+This repository contains the code of the [Weather App](https://www.uplabs.com/posts/uplabs-weather-app-challenge) from Uplabs. Thanks to [Kenneth Patterson](https://www.uplabs.com/pattsyk91) on his beautiful and inspirational App that he share on Uplabs
 
 This repository is build using Ionic 5
 
