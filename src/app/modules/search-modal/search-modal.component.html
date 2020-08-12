@@ -1,11 +1,11 @@
 <ion-header>
-    <ion-toolbar class="app-padding-header">
+    <ion-toolbar class="app-padding-header" mode="ios">
         <ion-buttons slot="start">
             <ion-button (click)="dismiss()">
                 <ion-icon slot="icon-only" name="arrow-back-outline" class="search-icon"></ion-icon>
             </ion-button>
         </ion-buttons>
-        <ion-searchbar [debounce]="600" placeholder="Search Location" (ionChange)="onSearchLocation($event)">
+        <ion-searchbar mode="ios" [debounce]="600" placeholder="Search Location" (ionChange)="onSearchLocation($event)">
         </ion-searchbar>
     </ion-toolbar>
 </ion-header>

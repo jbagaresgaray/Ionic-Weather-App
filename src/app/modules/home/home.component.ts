@@ -89,7 +89,9 @@ export class HomeComponent implements OnInit {
     this.getMyLocationList();
 
     this.showData = true;
-    event.target.complete();
+    if (event && event.target) {
+      event.target.complete();
+    }
   }
 
   onWeatherItemClick(location: any) {
