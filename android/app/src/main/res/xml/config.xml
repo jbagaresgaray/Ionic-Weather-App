@@ -2,5 +2,14 @@
 <widget version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <access origin="*" />
   
+  <feature name="LottieSplashScreen">
+    <param name="android-package" value="de.dustplanet.cordova.lottie.LottieSplashScreen"/>
+    <param name="onload" value="true"/>
+  </feature>
+
   
+  <preference name="SplashScreen" value="none" />
+  <preference name="LottieFullScreen" value="true" />
+  <preference name="LottieLoopAnimation" value="true" />
+  <preference name="LottieAnimationLocation" value="public/assets/loading.json" />
 </widget>

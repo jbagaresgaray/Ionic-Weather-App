@@ -19,7 +19,7 @@ If you are looking for the [Ionic React](), the repo with the full code can be f
 
 # React Native
 
-If you are looking for the [React Native](), the repo with the full code can be found here:
+If you are looking for the [React Native](https://github.com/jbagaresgaray/React-Native-Weather-App), the repo with the full code can be found here:
 
 ![React Native](https://miro.medium.com/max/4000/1*mm8JucFufPWr2ls_I1h_0w.png)
 

@@ -4,10 +4,13 @@
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
-  "plugins": {
-    "SplashScreen": {
-      "launchShowDuration": 0
+  "plugins": {},
+  "cordova": {
+    "preferences": {
+      "SplashScreen": "none",
+      "LottieFullScreen": "true",
+      "LottieLoopAnimation": "true",
+      "LottieAnimationLocation": "public/assets/loading.json"
     }
-  },
-  "cordova": {}
+  }
 }
