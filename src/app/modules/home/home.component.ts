@@ -41,37 +41,66 @@ export class HomeComponent implements OnInit {
   }
 
   private getMyLocationList() {
-    const cityListArr = this.storageService.getItem(LOCATION_LIST);
-    if (cityListArr) {
-      async.eachSeries(
-        cityListArr,
-        (city, callback) => {
-          this.unsplashService
-            .getPhotoByCityName(city.description, 'portrait')
-            .subscribe(
-              (response: any) => {
-                if (response) {
-                  const images = response.results;
-                  if (images) {
-                    if (images[0]) {
-                      city.image = images[0].urls;
-                    }
-                    callback();
+    // const cityListArr = this.storageService.getItem(LOCATION_LIST);
+    // if (cityListArr) {
+    //   async.eachSeries(
+    //     PLACES,
+    //     (city, callback) => {
+    //       this.unsplashService
+    //         .getPhotoByCityName(city.description, 'portrait')
+    //         .subscribe(
+    //           (response: any) => {
+    //             if (response) {
+    //               const images = response.results;
+    //               if (images) {
+    //                 if (images[0]) {
+    //                   city.image = images[0].urls;
+    //                 }
+    //                 callback();
+    //               }
+    //             }
+    //           },
+    //           (error) => {
+    //             console.log('getPhotoByCityName error: ', error);
+    //             callback();
+    //           }
+    //         );
+    //     },
+    //     () => {
+    //       this.cityListArr = cityListArr;
+    //       console.log('this.cityListArr: ', this.cityListArr);
+    //     }
+    //   );
+    // }
+    
+    async.eachSeries(
+      PLACES,
+      (city, callback) => {
+        this.unsplashService
+          .getPhotoByCityName(city.description, 'portrait')
+          .subscribe(
+            (response: any) => {
+              if (response) {
+                const images = response.results;
+                if (images) {
+                  if (images[0]) {
+                    city.image = images[0].urls;
                   }
+                  callback();
                 }
-              },
-              (error) => {
-                console.log('getPhotoByCityName error: ', error);
-                callback();
               }
-            );
-        },
-        () => {
-          this.cityListArr = cityListArr;
-          console.log('this.cityListArr: ', this.cityListArr);
-        }
-      );
-    }
+            },
+            (error) => {
+              console.log('getPhotoByCityName error: ', error);
+              callback();
+            }
+          );
+      },
+      () => {
+        this.cityListArr = PLACES;
+        console.log('this.cityListArr: ', this.cityListArr);
+      }
+    );
   }
 
   async getCurrentPosition() {

@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { LottieSplashScreen } from '@ionic-native/lottie-splash-screen/ngx';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -28,6 +29,7 @@ import { SearchModalModule } from './modules/search-modal/search-modal.module';
   providers: [
     StatusBar,
     LottieSplashScreen,
+    SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
   bootstrap: [AppComponent],
